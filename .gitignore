@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+
+# Vim
+*.swo
+*.swp
+
+# Bin
+
+# IDE
+.idea
+
+# Output of the go coverage tool
+*.out
+coverage.txt
+*.class
+target
+
+
+# Test binary, build with `go test -c`
+*.test
+
+# Dir
