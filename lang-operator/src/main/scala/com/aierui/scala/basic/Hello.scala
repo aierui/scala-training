@@ -1,4 +1,4 @@
-package com.aierui.scala.base
+package com.aierui.scala.basic
 
 object Hello {
   def main(args: Array[String]): Unit = {
