@@ -1,6 +1,6 @@
 package com.aierui.scala.closure
 
-object closure {
+object Closure {
 
   def main(args: Array[String]): Unit = {
     println("multiplier(1) value = " + multiplier(1))
