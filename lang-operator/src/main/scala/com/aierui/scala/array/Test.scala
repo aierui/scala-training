@@ -11,6 +11,7 @@ object Test {
 
     var total = 0.0
     // 如何获取一个变量的类型？
+    //获取一个数据或者对象的类型只需要在该对象后面添加 .getClass.getSimpleName
 
     for (i <- 0 to (arrList.length - 1)) {
       total += arrList(i)

@@ -1,6 +1,6 @@
 package com.aierui.scala.objects
 
-// 包名 不能为 class、object 等关键字
+// 包名 不能为 class、object、trait 等关键字
 
 object IdFactory {
   private var count = 0
