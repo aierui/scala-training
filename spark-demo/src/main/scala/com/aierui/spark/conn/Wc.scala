@@ -9,12 +9,11 @@ object Wc {
     val conf = new SparkConf()
 
     // conf.set("param")
-
     val sc = new SparkContext(conf)
 
-    val lines: RDD[String] = sc.textFile(args(0))
+    val lines: RDD[String] = sc.textFile("/Users/develop/aierui/scala-training/spark-demo/src/main/resources/input.txt")
     // 切分压平
-    val words: RDD[String] = lines.flatMap(_.split(" "))
+    val words: RDD[String] = lines.flatMap(_.split(","))
     // 单次和一组合
     val wordAndOne: RDD[(String, Int)] = words.map((_, 1))
 
@@ -24,7 +23,7 @@ object Wc {
     val sorted: RDD[(String, Int)] = reduced.sortBy(_._2, false)
 
     // 保存
-    sorted.saveAsTextFile(args(1))
+    sorted.saveAsTextFile("/Users/develop/aierui/scala-training/spark-demo/src/main/resources/ouput.txt")
 
     sc.stop()
   }
