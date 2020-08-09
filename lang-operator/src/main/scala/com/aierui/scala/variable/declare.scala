@@ -12,6 +12,11 @@ class B(n: Int) {
 }
 
 object Test {
+
+  // 注解将元信息与定义相关联。 例如，方法之前的注解 @deprecated 会导致编译器在该方法被使用时打印警告信息。
+  @deprecated("deprecation message", "release # which deprecates method")
+  def oldData = "oldData"
+
   def main(args: Array[String]): Unit = {
     val x = new B(5)
     //    x = new B(6) //Doesn't work, because I can't replace the object created on the line above with this new one.
@@ -24,5 +29,7 @@ object Test {
 
     // 如何打印出一个对象
     print(x.toString)
+
+    println(oldData)
   }
 }
